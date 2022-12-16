@@ -109,7 +109,6 @@ do
     end
     turtle.turnRight()
     turtle.turnRight()
-    detectD()
 end
 
 
