@@ -90,7 +90,7 @@ function placeStairs()
         print(turtle.getItemDetail(i).name)
         if turtle.getItemDetail(i) == nil and i < 16 then
             i = i + 1
-        elseif turtle.getItemDetail(i).name == "minecraft:deepslate_tile_stairs" and turtle.getItemCount(i) < 1 then
+        elseif turtle.getItemDetail(i).name == "minecraft:deepslate_tile_stairs" and turtle.getItemCount(i) > 1 then
             print("Placing stairs!", i)
             turtle.place()
             break
