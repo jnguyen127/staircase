@@ -61,9 +61,14 @@ function checkFuel()
         print("No refueling needed! :)")
     end
     if turtle.getFuelLevel() < 100 then
-        for i = 1, 16
+        i = 1
+        while i <= 16
         do
-            turtle.select(i)
+            turtle.select(i)        
+            print(i)
+            if turtle.getItemDetail(i) == "nil" then
+                i = i + 1
+            end
             if (turtle.getItemDetail(i).name == "minecraft:coal" or turtle.getItemDetail(i).name == "minecraft:charcoal") and turtle.getItemCount(i) < 1 then
                 print("Refueling!")
                 turtle.refuel()
@@ -73,16 +78,22 @@ function checkFuel()
                 print("No more fuel! :(")
                 while 1 do end
             end
+            if turtle.getItemDetail(i) ~= "nil" then
+                i = i + 1
+            end
         end
     end
 end
 
 function placeStairs()
-    for i = 1, 16
+    i = 1
+    while i <= 16
     do
-        turtle.select(i)
+        turtle.select(i)        
         print(i)
-        print(turtle.getItemDetail(i).name)
+        if turtle.getItemDetail(i) == "nil" then
+            i = i + 1
+        end
         if turtle.getItemDetail(i).name == "minecraft:deepslate_tile_stairs" and turtle.getItemCount(i) < 1 then
             print("Placing stairs!", i)
             turtle.place()
@@ -91,6 +102,9 @@ function placeStairs()
         if i == 16 then 
             print("No more stairs! :(")
             while 1 do end
+        end
+        if turtle.getItemDetail(i) ~= "nil" then
+            i = i + 1
         end
     end
 end
@@ -117,9 +131,14 @@ function placeTorches()
     detectF()
     turtle.turnLeft()
     turtle.turnLeft()
-    for i = 1, 16
+    i = 1
+    while i <= 16
     do
-        turtle.select(i)
+        turtle.select(i)        
+        print(i)
+        if turtle.getItemDetail(i) == "nil" then
+            i = i + 1
+        end
         if turtle.getItemDetail(i).name == "minecraft:torch" and turtle.getItemCount(i) < 1 then
             print("Placing torches!", i)
             turtle.place()
@@ -147,6 +166,9 @@ function placeTorches()
         if i == 16 then
             print("No more torches! :(")
             while 1 do end
+        end
+        if turtle.getItemDetail(i) ~= "nil" then
+            i = i + 1
         end
     end
     
