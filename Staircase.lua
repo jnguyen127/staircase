@@ -57,7 +57,7 @@ end
 
 function checkFuel()
     print("Checking for fuel...")
-    if turtle.getFueldLevel() >= 100 then
+    if turtle.getFuelLevel() >= 100 then
         print("No refueling needed! :)")
     end
     if turtle.getFuelLevel() < 100 then
