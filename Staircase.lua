@@ -166,17 +166,17 @@ end
 
 -- Main Code --
 detectD()
-i = 0
+j = 0
 while 1
 do
     ClearLeftToRight()
     placeMove()
     turtle.turnRight()
     turtle.turnRight()
-    print("To place torches... i =", i)
-    if i % 5 == 0 then
+    print("To place torches... j =", j)
+    if j % 5 == 0 then
         placeTorches()
     end
     detectD()
-    i = i + 1
+    j = j + 1
 end
