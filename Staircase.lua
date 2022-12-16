@@ -7,8 +7,8 @@ function detect()
 end 
 
 -- Main Code -- 
-for i = 0, 10, 1
+for i = 0, 7, 1
 do  
     detect()
-    print(i)
+    print("Moved " + i + "block(s)!")
 end
