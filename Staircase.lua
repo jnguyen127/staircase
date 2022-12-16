@@ -17,7 +17,7 @@ function detectD()
     turtle.down()
 end 
 
-function digF6()
+function digF5()
     checkFuel()
     for i = 0, 4
     do  
@@ -26,9 +26,18 @@ function digF6()
     end
 end
 
+function digF4()
+    checkFuel()
+    for i = 0, 3
+    do  
+        print("Digging Forward!", i)
+        detectF()
+    end
+end
+
 function goForwardR()
     checkFuel()
-    digF6()
+    digF5()
     turtle.turnRight()
     detectF()
     turtle.turnRight()
@@ -36,7 +45,7 @@ end
 
 function goForwardL()
     checkFuel()
-    digF6()
+    digF5()
     turtle.turnLeft()
     detectF()
     turtle.turnLeft()
@@ -48,7 +57,22 @@ function ClearLeftToRight()
     goForwardL()
     goForwardR()
     goForwardL()
-    digF6()
+    digF5()
+    turtle.turnRight()
+    turtle.turnRight()
+    for i = 0, 3
+    do
+        detectF()
+    end
+end
+
+function ClearLeftToRight()
+    checkFuel()
+    goForwardR()
+    goForwardL()
+    goForwardR()
+    goForwardL()
+    digF4()
     turtle.turnRight()
     turtle.turnRight()
     for i = 0, 3
@@ -93,9 +117,10 @@ end
 
 -- Main Code --
 detectD()
+ClearLeftToRight()
 while 1
 do
-    ClearLeftToRight()
+    ClearLeftToRightOneLess()
     for i = 0, 4
     do
         placeMove()
