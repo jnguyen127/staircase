@@ -1,14 +1,32 @@
-function detect()
+function detectF()
     if turtle.detect() then
-        print("Block detected!")
         turtle.dig()
     end
     turtle.forward()
 end 
-
--- Main Code -- 
-for i = 0, 7, 1
-do  
-    detect()
-    print("Moved " + i + "block(s)!")
+function detectD()
+    if turtle.detect() then
+        turtle.digDown()
+    end
+    turtle.down()
+end 
+function digF6()
+    for i = 0, 7, 1
+    do  
+        detectF()
+    end
 end
+
+-- Main Code --
+turtle.forward()
+detectD()
+digF6()
+turtle.turnRight()
+detectF()
+turtle.turnRight()
+digF6()
+turtle.turnLeft()
+detectF()
+turtle.turnLeft()
+digF6()
+
