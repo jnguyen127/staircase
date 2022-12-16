@@ -74,7 +74,7 @@ function checkFuel()
 end
 
 function placeStairs()
-    for i = 1, 15
+    for i = 1, 8
     do
         turtle.select(i)
         if turtle.getSelectedSlot() then
@@ -148,7 +148,7 @@ do
     if i % 5 == 0 then
         placeTorches()
     detectD()
-    i++
+    i = i + 1
 end
 
 
