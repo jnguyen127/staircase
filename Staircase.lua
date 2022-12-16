@@ -44,7 +44,6 @@ end
 
 function ClearLeftToRight()
     checkFuel()
-    detectF()
     detectD()
     goForwardR()
     goForwardL()
@@ -109,6 +108,8 @@ do
     end
     turtle.turnRight()
     turtle.turnRight()
+    detectD()
+    detectF()
 end
 
 
