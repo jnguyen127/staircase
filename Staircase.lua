@@ -1,6 +1,7 @@
 function detectF()
-    if turtle.detect() then
+    while turtle.detect() then
         turtle.dig()
+        sleep(0.5)
     end
     turtle.forward()
 end 
