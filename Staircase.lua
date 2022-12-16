@@ -68,16 +68,13 @@ function checkFuel()
             print(i)
             if turtle.getItemDetail(i) == "nil" then
                 i = i + 1
-            end
-            if (turtle.getItemDetail(i).name == "minecraft:coal" or turtle.getItemDetail(i).name == "minecraft:charcoal") and turtle.getItemCount(i) < 1 then
+            elseif (turtle.getItemDetail(i).name == "minecraft:coal" or turtle.getItemDetail(i).name == "minecraft:charcoal") and turtle.getItemCount(i) < 1 then
                 print("Refueling!")
                 turtle.refuel()
                 break
-            end
-            if i == 16 then 
+            elseif i == 16 then 
                 print("No more fuel! :(")
                 while 1 do end
-            end
             elseif turtle.getItemDetail(i) ~= "nil" then
                 i = i + 1
             end
