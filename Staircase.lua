@@ -66,7 +66,7 @@ function checkFuel()
         do
             turtle.select(i)        
             print(i)
-            if ~(turtle.getItemDetail(i)) then
+            if turtle.getItemDetail(i) == nil then
                 i = i + 1
             elseif (turtle.getItemDetail(i).name == "minecraft:coal" or turtle.getItemDetail(i).name == "minecraft:charcoal") and turtle.getItemCount(i) < 1 then
                 print("Refueling!")
@@ -75,7 +75,7 @@ function checkFuel()
             elseif i == 16 then 
                 print("No more fuel! :(")
                 while 1 do end
-            elseif turtle.getItemDetail(i) ~= "nil" then
+            elseif turtle.getItemDetail(i) ~= nil then
                 i = i + 1
             end
         end
@@ -89,7 +89,7 @@ function placeStairs()
         turtle.select(i)        
         print(i)
         print(turtle.getItemDetail(i))
-        if turtle.getItemDetail(i) == "nil" then
+        if turtle.getItemDetail(i) == nil then
             i = i + 1
         elseif turtle.getItemDetail(i).name == "minecraft:deepslate_tile_stairs" and turtle.getItemCount(i) < 1 then
             print("Placing stairs!", i)
@@ -98,7 +98,7 @@ function placeStairs()
         elseif i == 16 then 
             print("No more stairs! :(")
             while 1 do end
-        elseif turtle.getItemDetail(i) ~= "nil" then
+        elseif turtle.getItemDetail(i) ~= nil then
             i = i + 1
         end
     end
@@ -131,7 +131,7 @@ function placeTorches()
     do
         turtle.select(i)        
         print(i)
-        if turtle.getItemDetail(i) == "nil" then
+        if turtle.getItemDetail(i) == nil then
             i = i + 1
         elseif turtle.getItemDetail(i).name == "minecraft:torch" and turtle.getItemCount(i) < 1 then
             print("Placing torches!", i)
@@ -159,7 +159,7 @@ function placeTorches()
         elseif i == 16 then
             print("No more torches! :(")
             while 1 do end
-        elseif turtle.getItemDetail(i) ~= "nil" then
+        elseif turtle.getItemDetail(i) ~= nil then
             i = i + 1
         end
     end
