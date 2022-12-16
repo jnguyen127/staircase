@@ -67,9 +67,9 @@ function checkFuel()
                 break
             end
         end
-    end
-    if turtle.getItemCount(i) < 1 then 
-        return
+        if turtle.getItemCount(i) < 1 then 
+            return
+        end
     end
 end
 
