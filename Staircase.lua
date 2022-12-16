@@ -123,12 +123,16 @@ function placeTorches()
             turtle.turnLeft()
             detectF()
             detectF()
+            turtle.turnLeft()
+            detectF()
+            turtle.turnRight()
             detectF()
             turtle.turnLeft()
-            for i = 0, 3
-            do
-                detectF()
-            end
+            detectF()
+            detectF()
+            detectF()
+            turtle.turnRight()
+            turtle.turnRight()
             break
         end
     end
