@@ -57,7 +57,7 @@ end
 
 function checkFuel()
     if turtle.getFuelLevel() < 100 then
-        for i = 13, 16
+        for i = 1, 16
         do
             turtle.select(i)
             if (turtle.getItemDetail(i).name == "minecraft:coal" or turtle.getItemDetail(i).name == "minecraft:charcoal") and turtle.getItemCount(i) < 1 then
@@ -74,7 +74,7 @@ function checkFuel()
 end
 
 function placeStairs()
-    for i = 1, 8
+    for i = 1, 16
     do
         turtle.select(i)
         if turtle.getItemDetail(i) == "minecraft:deepslate_tile_stairs" and turtle.getItemCount(i) < 1 then
@@ -82,7 +82,7 @@ function placeStairs()
             turtle.place()
             break
         end
-        if i == 8 then 
+        if i == 16 then 
             print("No more stairs! :(")
             return
         end
@@ -111,7 +111,7 @@ function placeTorches()
     detectF()
     turtle.turnLeft()
     turtle.turnLeft()
-    for i = 9, 12
+    for i = 1, 16
     do
         turtle.select(i)
         if turtle.getItemDetail(i).name == "minecraft:torch" and turtle.getItemCount(i) < 1 then
@@ -138,7 +138,7 @@ function placeTorches()
             turtle.turnRight()
             break
         end
-        if i == 12 then
+        if i == 16 then
             print("No more torches! :(")
             return
         end
