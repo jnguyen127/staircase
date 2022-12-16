@@ -1,4 +1,5 @@
 function detectF()
+    checkFuel()
     while turtle.detect()
     do
         turtle.dig()
@@ -8,6 +9,7 @@ function detectF()
 end 
 
 function detectD()
+    checkFuel()
     if turtle.detectDown() then
         turtle.digDown()
     end
@@ -15,6 +17,7 @@ function detectD()
 end 
 
 function digF6()
+    checkFuel()
     for i = 0, 4
     do  
         print("Digging Forward!", i)
@@ -23,6 +26,7 @@ function digF6()
 end
 
 function goForwardR()
+    checkFuel()
     digF6()
     turtle.turnRight()
     detectF()
@@ -30,41 +34,43 @@ function goForwardR()
 end
 
 function goForwardL()
+    checkFuel()
     digF6()
     turtle.turnLeft()
     detectF()
     turtle.turnLeft()
 end
 
--- Main Code --
-detectF()
-detectD()
-goForwardR()
-goForwardL()
-goForwardR()
-goForwardL()
-digF6()
-turtle.turnRight()
-turtle.turnRight()
-for i = 0, 4
-do
+function ClearLeftToRight()
+    checkFuel()
     detectF()
+    detectD()
+    goForwardR()
+    goForwardL()
+    goForwardR()
+    goForwardL()
+    digF6()
+    turtle.turnRight()
+    turtle.turnRight()
+    for i = 0, 3
+    do
+        detectF()
+    end
 end
-turtle.turnRight()
-turtle.turnRight()
 
-detectF()
-detectD()
-goForwardL()
-goForwardR()
-goForwardL()
-goForwardR()
-digF6()
-turtle.turnLeft()
-turtle.turnLeft()
-for i = 0, 4
-do
-    detectF()
+function checkFuel()
+    if turtle.getFuelLevel() < 100 then
+        for i = 13, 16
+        do
+            turtle.select(i)
+            if turtle.getSelectedSlot() then
+                turtle.refuel()
+                break
+            end
+        end
+    end
 end
-turtle.turnLeft()
-turtle.turnLeft()
+
+-- Main Code --
+ClearLeftToRight()
+
