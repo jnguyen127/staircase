@@ -108,8 +108,6 @@ do
     end
     turtle.turnRight()
     turtle.turnRight()
-    detectD()
-    detectF()
 end
 
 
