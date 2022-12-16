@@ -13,6 +13,7 @@ end
 function digF6()
     for i = 0, 7, 1
     do  
+        printf("Digging Forward!", i)
         detectF()
     end
 end
