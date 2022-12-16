@@ -44,7 +44,6 @@ end
 
 function ClearLeftToRight()
     checkFuel()
-    detectD()
     goForwardR()
     goForwardL()
     goForwardR()
@@ -93,6 +92,7 @@ function placeMove()
 end
 
 -- Main Code --
+detectD()
 while 1
 do
     ClearLeftToRight()
