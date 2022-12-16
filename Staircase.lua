@@ -82,7 +82,9 @@ function placeStairs()
             turtle.place()
             break
         end
-        print(turtle.getItemDetail(i))
+        print(turtle.getItemDetail(i)[0])
+        print(turtle.getItemDetail(i)[1])
+        print(turtle.getItemDetail(i)[2])
         if i == 8 and turtle.getItemCount(i) < 1 and turtle.getItemDetail(i) ~= "minecraft:deepslate_tile_stairs" then 
             print("No more stairs! :(")
             return
