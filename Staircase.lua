@@ -3,6 +3,7 @@ function detectF()
     while turtle.detect()
     do
         turtle.dig()
+        print("Waiting for potential gravel/sand...")
         sleep(0.5)
     end
     turtle.forward()
@@ -103,7 +104,7 @@ do
     do
         placeMove()
     end
-    turtle.Right()
+    turtle.turnRight()
     detectD()
 end
 
