@@ -88,6 +88,7 @@ function placeStairs()
     do
         turtle.select(i)        
         print(i)
+        print(turtle.getItemDetail(i))
         if turtle.getItemDetail(i) == "nil" then
             i = i + 1
         elseif turtle.getItemDetail(i).name == "minecraft:deepslate_tile_stairs" and turtle.getItemCount(i) < 1 then
