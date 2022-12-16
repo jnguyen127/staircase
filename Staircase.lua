@@ -41,4 +41,28 @@ goForwardR()
 goForwardL()
 goForwardR()
 goForwardL()
+digF6()
+turtle.turnRight()
+turtle.turnRight()
+for i = 0, 5
+do
+    detectF()
+end
+turtle.turnRight()
+turtle.turnRight()
+
+detectF()
+detectD()
+goForwardL()
 goForwardR()
+goForwardL()
+goForwardR()
+digF6()
+turtle.turnLeft()
+turtle.turnLeft()
+for i = 0, 5
+do
+    detectF()
+end
+turtle.turnLeft()
+turtle.turnLeft()
