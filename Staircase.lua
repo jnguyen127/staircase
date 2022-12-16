@@ -99,7 +99,10 @@ end
 while 1
 do
     ClearLeftToRight()
-    placeMove()
+    for i 0, 4
+    do
+        placeMove()
+    end
 end
 
 
