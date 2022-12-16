@@ -19,7 +19,7 @@ function digF6()
 end
 
 -- Main Code --
-turtle.forward()
+detectF()
 detectD()
 digF6()
 turtle.turnRight()
