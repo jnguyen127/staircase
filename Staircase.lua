@@ -78,7 +78,7 @@ function checkFuel()
                 print("No more fuel! :(")
                 while 1 do end
             end
-            if turtle.getItemDetail(i) ~= "nil" then
+            elseif turtle.getItemDetail(i) ~= "nil" then
                 i = i + 1
             end
         end
@@ -93,17 +93,14 @@ function placeStairs()
         print(i)
         if turtle.getItemDetail(i) == "nil" then
             i = i + 1
-        end
-        if turtle.getItemDetail(i).name == "minecraft:deepslate_tile_stairs" and turtle.getItemCount(i) < 1 then
+        elseif turtle.getItemDetail(i).name == "minecraft:deepslate_tile_stairs" and turtle.getItemCount(i) < 1 then
             print("Placing stairs!", i)
             turtle.place()
             break
-        end
-        if i == 16 then 
+        elseif i == 16 then 
             print("No more stairs! :(")
             while 1 do end
-        end
-        if turtle.getItemDetail(i) ~= "nil" then
+        elseif turtle.getItemDetail(i) ~= "nil" then
             i = i + 1
         end
     end
@@ -138,8 +135,7 @@ function placeTorches()
         print(i)
         if turtle.getItemDetail(i) == "nil" then
             i = i + 1
-        end
-        if turtle.getItemDetail(i).name == "minecraft:torch" and turtle.getItemCount(i) < 1 then
+        elseif turtle.getItemDetail(i).name == "minecraft:torch" and turtle.getItemCount(i) < 1 then
             print("Placing torches!", i)
             turtle.place()
             turtle.turnRight()
@@ -162,12 +158,10 @@ function placeTorches()
             turtle.turnRight()
             turtle.turnRight()
             break
-        end
-        if i == 16 then
+        elseif i == 16 then
             print("No more torches! :(")
             while 1 do end
-        end
-        if turtle.getItemDetail(i) ~= "nil" then
+        elseif turtle.getItemDetail(i) ~= "nil" then
             i = i + 1
         end
     end
