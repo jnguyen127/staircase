@@ -37,9 +37,8 @@ end
 -- Main Code --
 detectF()
 detectD()
-for i = 0, 4
-do
-    print(i)
-    goForwardR()
-    goForwardL()
-end
+goForwardR()
+goForwardL()
+goForwardR()
+goForwardL()
+goForwardR()
