@@ -44,7 +44,7 @@ goForwardL()
 digF6()
 turtle.turnRight()
 turtle.turnRight()
-for i = 0, 5
+for i = 0, 4
 do
     detectF()
 end
@@ -60,7 +60,7 @@ goForwardR()
 digF6()
 turtle.turnLeft()
 turtle.turnLeft()
-for i = 0, 5
+for i = 0, 4
 do
     detectF()
 end
