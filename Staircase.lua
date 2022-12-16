@@ -6,7 +6,7 @@ function detect()
     end
 end 
 
-/* Main Program */
+-- Main Program --
 for i = 0, 10, 1
 do  
     if detect() then
