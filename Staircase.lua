@@ -69,8 +69,38 @@ function checkFuel()
             end
         end
     end
+    if turtle.getSelectedSlot() < 1 then 
+        return
+    end
+end
+
+function placeStairs()
+    for i = 1, 15
+    do
+        turtle.select(i)
+        if turtle.getSelectedSlot() then
+            turtle.place()
+            break
+        end
+    end
+    if turtle.getSelectedSlot() < 1 then 
+        return
+    end
+end
+
+function placeMove()
+    placeStairs()
+    turtle.turnRight()
+    detectF()
+    turtle.turnLeft()
 end
 
 -- Main Code --
-ClearLeftToRight()
+local x, y, z = gps.locate()
+while y > -58
+do
+    ClearLeftToRight()
+    placeMove()
+end
+
 
