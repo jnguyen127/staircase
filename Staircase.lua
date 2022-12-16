@@ -147,8 +147,7 @@ do
     turtle.turnRight()
     if i % 5 == 0 then
         placeTorches()
+    end
     detectD()
     i = i + 1
 end
-
-
