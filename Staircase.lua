@@ -86,8 +86,7 @@ function placeStairs()
     i = 1
     while i <= 16
     do
-        turtle.select(i)        
-        print(turtle.getItemDetail(i).name)
+        turtle.select(i)
         if turtle.getItemDetail(i) == nil and i < 16 then
             i = i + 1
         elseif turtle.getItemDetail(i).name == "minecraft:deepslate_tile_stairs" and turtle.getItemCount(i) > 1 then
