@@ -96,8 +96,7 @@ function placeMove()
 end
 
 -- Main Code --
-local x, y, z = gps.locate()
-while y > -58
+while 1
 do
     ClearLeftToRight()
     placeMove()
