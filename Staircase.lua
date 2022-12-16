@@ -5,7 +5,7 @@ function detectF()
     turtle.forward()
 end 
 function detectD()
-    if turtle.detect() then
+    if turtle.detectDown() then
         turtle.digDown()
     end
     turtle.down()
