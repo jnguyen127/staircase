@@ -88,17 +88,9 @@ function placeStairs()
 end
 
 function placeMove()
-    placeStairs()
-end
-
--- Main Code --
-detectD()
-while 1
-do
-    ClearLeftToRight()
     for i = 0, 4
     do
-        placeMove()
+        placeStairs()
         if i == 4 then
             break
         end
@@ -106,9 +98,57 @@ do
         detectF()
         turtle.turnLeft()
     end
+end
+
+function placeTorches()
+    for i = 0, 3
+    do
+        detectF()
+    end
+    turtle.turnRight()
+    detectF()
+    turtle.turnLeft()
+    turtle.turnLeft()
+    for i = 9, 12
+    do
+        turtle.select(i)
+        if turtle.getSelectedSlot() > 1 then
+            turtle.place()
+            turtle.turnRight()
+            turtle.turnRight()
+            detectF()
+            detectF()
+            turtle.place()
+            turtle.turnLeft()
+            turtle.turnLeft()
+            detectF()
+            detectF()
+            detectF()
+            turtle.turnLeft()
+            for i = 0, 3
+            do
+                detectF()
+            end
+            break
+        end
+    end
+    if turtle.getSelectedSlot() < 1 then
+        return
+    end
+end
+-- Main Code --
+detectD()
+local i = 0
+while 1
+do
+    ClearLeftToRight()
+    placeMove()
     turtle.turnRight()
     turtle.turnRight()
+    if i % 5 == 0 then
+        placeTorches()
     detectD()
+    i++
 end
 
 
