@@ -62,13 +62,13 @@ function checkFuel()
         for i = 13, 16
         do
             turtle.select(i)
-            if turtle.getSelectedSlot() then
+            if turtle.getItemCount(i) then
                 turtle.refuel()
                 break
             end
         end
     end
-    if turtle.getSelectedSlot() < 1 then 
+    if turtle.getItemCount(i) < 1 then 
         return
     end
 end
@@ -77,12 +77,12 @@ function placeStairs()
     for i = 1, 8
     do
         turtle.select(i)
-        if turtle.getSelectedSlot() then
+        if turtle.getItemCount(i) then
             turtle.place()
             break
         end
     end
-    if turtle.getSelectedSlot() < 1 then 
+    if turtle.getItemCount(i) < 1 then 
         return
     end
 end
@@ -112,7 +112,7 @@ function placeTorches()
     for i = 9, 12
     do
         turtle.select(i)
-        if turtle.getSelectedSlot() > 1 then
+        if turtle.getItemCount(i) then
             turtle.place()
             turtle.turnRight()
             turtle.turnRight()
@@ -136,7 +136,7 @@ function placeTorches()
             break
         end
     end
-    if turtle.getSelectedSlot() < 1 then
+    if turtle.getItemCount(i) < 1 then
         return
     end
 end
