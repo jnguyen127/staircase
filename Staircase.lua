@@ -66,9 +66,9 @@ function checkFuel()
                 turtle.refuel()
                 break
             end
-        end
-        if turtle.getItemCount(i) < 1 then 
-            return
+            if i== 16 and turtle.getItemCount(i) < 1 then 
+                return
+            end
         end
     end
 end
@@ -81,9 +81,9 @@ function placeStairs()
             turtle.place()
             break
         end
-    end
-    if turtle.getItemCount(i) < 1 then 
-        return
+        if i == 8 and turtle.getItemCount(i) < 1 then 
+            return
+        end
     end
 end
 
@@ -135,10 +135,11 @@ function placeTorches()
             turtle.turnRight()
             break
         end
+        if i == 12 and turtle.getItemCount(i) < 1 then
+            return
+        end
     end
-    if turtle.getItemCount(i) < 1 then
-        return
-    end
+    
 end
 -- Main Code --
 detectD()
