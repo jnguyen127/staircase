@@ -66,7 +66,7 @@ function checkFuel()
         do
             turtle.select(i)        
             print(i)
-            if turtle.getItemDetail(i) == nil then
+            if turtle.getItemDetail(i) == nil and i < 16 then
                 i = i + 1
             elseif (turtle.getItemDetail(i).name == "minecraft:coal" or turtle.getItemDetail(i).name == "minecraft:charcoal") and turtle.getItemCount(i) < 1 then
                 print("Refueling!")
@@ -87,8 +87,8 @@ function placeStairs()
     while i <= 16
     do
         turtle.select(i)        
-        print(turtle.getItemDetail(i).name)
-        if turtle.getItemDetail(i) == nil then
+        print(type(turtle.getItemDetail(i).name))
+        if turtle.getItemDetail(i) == nil and i < 16 then
             i = i + 1
         elseif turtle.getItemDetail(i).name == "minecraft:deepslate_tile_stairs" and turtle.getItemCount(i) < 1 then
             print("Placing stairs!", i)
@@ -130,7 +130,7 @@ function placeTorches()
     do
         turtle.select(i)        
         print(i)
-        if turtle.getItemDetail(i) == nil then
+        if turtle.getItemDetail(i) == nil and i < 16 then
             i = i + 1
         elseif turtle.getItemDetail(i).name == "minecraft:torch" and turtle.getItemCount(i) < 1 then
             print("Placing torches!", i)
