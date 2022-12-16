@@ -68,7 +68,7 @@ function checkFuel()
             print(i)
             if turtle.getItemDetail(i) == nil and i < 16 then
                 i = i + 1
-            elseif (turtle.getItemDetail(i).name == "minecraft:coal" or turtle.getItemDetail(i).name == "minecraft:charcoal") and turtle.getItemCount(i) < 1 then
+            elseif (turtle.getItemDetail(i).name == "minecraft:coal" or turtle.getItemDetail(i).name == "minecraft:charcoal") and turtle.getItemCount(i) > 1 then
                 print("Refueling!")
                 turtle.refuel()
                 break
@@ -131,7 +131,7 @@ function placeTorches()
         print(i)
         if turtle.getItemDetail(i) == nil and i < 16 then
             i = i + 1
-        elseif turtle.getItemDetail(i).name == "minecraft:torch" and turtle.getItemCount(i) < 1 then
+        elseif turtle.getItemDetail(i).name == "minecraft:torch" and turtle.getItemCount(i) > 1 then
             print("Placing torches!", i)
             turtle.place()
             turtle.turnRight()
