@@ -91,9 +91,6 @@ end
 
 function placeMove()
     placeStairs()
-    turtle.turnRight()
-    detectF()
-    turtle.turnLeft()
 end
 
 -- Main Code --
@@ -103,7 +100,14 @@ do
     for i = 0, 4
     do
         placeMove()
+        if i == 4 then
+            break
+        end
+        turtle.turnRight()
+        detectF()
+        turtle.turnLeft()
     end
+    turtle.turnRight()
     turtle.turnRight()
     detectD()
 end
