@@ -103,6 +103,8 @@ do
     do
         placeMove()
     end
+    turtle.Right()
+    detectD()
 end
 
 
