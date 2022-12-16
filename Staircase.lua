@@ -65,7 +65,7 @@ function checkFuel()
                 turtle.refuel()
                 break
             end
-            if i == 16 and turtle.getItemCount(i) < 1 and (turtle.getItemDetail(i) != "minecraft:coal" or turtle.getItemDetail(i) != "minecraft:charcoal") then 
+            if i == 16 and turtle.getItemCount(i) < 1 and (turtle.getItemDetail(i) ~= "minecraft:coal" or turtle.getItemDetail(i) ~= "minecraft:charcoal") then 
                 print("No more fuel! :(")
                 return
             end
@@ -82,7 +82,7 @@ function placeStairs()
             turtle.place()
             break
         end
-        if i == 8 and turtle.getItemCount(i) < 1 and turtle.getItemDetail(i) != "minecraft:deepslate_tile_stairs" then 
+        if i == 8 and turtle.getItemCount(i) < 1 and turtle.getItemDetail(i) ~= "minecraft:deepslate_tile_stairs" then 
             print("No more stairs! :(")
             return
         end
@@ -138,7 +138,7 @@ function placeTorches()
             turtle.turnRight()
             break
         end
-        if i == 12 and turtle.getItemCount(i) < 1 and turtle.getItemDetail(i) != "minecraft:torch" then
+        if i == 12 and turtle.getItemCount(i) < 1 and turtle.getItemDetail(i) ~= "minecraft:torch" then
             print("No more torches! :(")
             return
         end
