@@ -90,7 +90,7 @@ function placeStairs()
         if turtle.getItemDetail(i) == nil and i < 16 then
             i = i + 1
         elseif turtle.getItemDetail(i).name == "minecraft:deepslate_tile_stairs" and turtle.getItemCount(i) > 1 then
-            print("Placing stairs!", i)
+            print("Placing stairs!")
             turtle.place()
             break
         elseif i == 16 then 
@@ -127,12 +127,12 @@ function placeTorches()
     i = 1
     while i <= 16
     do
-        turtle.select(i)        
-        print(i)
+        turtle.select(i)
+        print(turtle.getItemDetail(i).name)        
         if turtle.getItemDetail(i) == nil and i < 16 then
             i = i + 1
         elseif turtle.getItemDetail(i).name == "minecraft:torch" and turtle.getItemCount(i) > 1 then
-            print("Placing torches!", i)
+            print("Placing torches!")
             turtle.place()
             turtle.turnRight()
             turtle.turnRight()
