@@ -11,7 +11,7 @@ function detectD()
     turtle.down()
 end 
 function digF6()
-    for i = 0, 7, 1
+    for i = 0, 5
     do  
         print("Digging Forward!", i)
         detectF()
