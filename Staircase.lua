@@ -3,7 +3,6 @@ function detectF()
     while turtle.detect()
     do
         turtle.dig()
-        print("Waiting for potential gravel/sand...")
         sleep(0.5)
     end
     turtle.forward()
@@ -21,7 +20,6 @@ function digF6()
     checkFuel()
     for i = 0, 4
     do  
-        print("Digging Forward!", i)
         detectF()
     end
 end
@@ -63,10 +61,12 @@ function checkFuel()
         do
             turtle.select(i)
             if turtle.getItemCount(i) then
+                print("Refueling!")
                 turtle.refuel()
                 break
             end
             if i== 16 and turtle.getItemCount(i) < 1 then 
+                print("No more fuel! :(")
                 return
             end
         end
@@ -78,10 +78,12 @@ function placeStairs()
     do
         turtle.select(i)
         if turtle.getItemCount(i) then
+            print("Placing stairs!", i)
             turtle.place()
             break
         end
         if i == 8 and turtle.getItemCount(i) < 1 then 
+            print("No more stairs! :(")
             return
         end
     end
@@ -113,6 +115,7 @@ function placeTorches()
     do
         turtle.select(i)
         if turtle.getItemCount(i) then
+            print("Placing torches!", i)
             turtle.place()
             turtle.turnRight()
             turtle.turnRight()
@@ -136,11 +139,13 @@ function placeTorches()
             break
         end
         if i == 12 and turtle.getItemCount(i) < 1 then
+            print("No more torches! :(")
             return
         end
     end
     
 end
+
 -- Main Code --
 detectD()
 i = 0
