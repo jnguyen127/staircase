@@ -81,6 +81,8 @@ function placeStairs()
     for i = 1, 16
     do
         turtle.select(i)
+        print(i)
+        print(turtle.getItemDetail(i).name)
         if turtle.getItemDetail(i).name == "minecraft:deepslate_tile_stairs" and turtle.getItemCount(i) < 1 then
             print("Placing stairs!", i)
             turtle.place()
