@@ -56,16 +56,11 @@ function ClearLeftToRight()
 end
 
 function checkFuel()
-    print("Checking for fuel...")
-    if turtle.getFuelLevel() >= 100 then
-        print("No refueling needed! :)")
-    end
     if turtle.getFuelLevel() < 100 then
         i = 1
         while i <= 16
         do
             turtle.select(i)        
-            print(i)
             if turtle.getItemDetail(i) == nil and i < 16 then
                 i = i + 1
             elseif (turtle.getItemDetail(i).name == "minecraft:coal" or turtle.getItemDetail(i).name == "minecraft:charcoal") and turtle.getItemCount(i) > 1 then
@@ -80,7 +75,6 @@ function checkFuel()
             end
         end
     end
-end
 
 function placeStairs()
     i = 1
@@ -127,8 +121,7 @@ function placeTorches()
     i = 1
     while i <= 16
     do
-        turtle.select(i)
-        print(turtle.getItemDetail(i).name)        
+        turtle.select(i)      
         if turtle.getItemDetail(i) == nil and i < 16 then
             i = i + 1
         elseif turtle.getItemDetail(i).name == "minecraft:torch" and turtle.getItemCount(i) > 1 then
