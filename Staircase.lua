@@ -75,6 +75,7 @@ function checkFuel()
             end
         end
     end
+end
 
 function placeStairs()
     i = 1
