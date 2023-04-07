@@ -1,11 +1,11 @@
 function detectF()
-    checkFuel()
-    while turtle.detect()
-    do
-        turtle.dig()
-        sleep(0.5)
-    end
-    turtle.forward()
+--     checkFuel()
+--     while turtle.detect()
+--     do
+--         turtle.dig()
+--         sleep(0.5)
+--     end
+--     turtle.forward()
 end 
 
 function detectD()
