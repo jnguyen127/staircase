@@ -56,16 +56,12 @@ function ClearLeftToRight()
 end
 
 function checkFuel()
-    print("Checking for fuel...")
-    if turtle.getFuelLevel() >= 100 then
-        print("No refueling needed! :)")
-    end
+    print(turtle.getFuelLevel())
     if turtle.getFuelLevel() < 100 then
         i = 1
         while i <= 16
         do
             turtle.select(i)        
-            print(i)
             if turtle.getItemDetail(i) == nil and i < 16 then
                 i = i + 1
             elseif (turtle.getItemDetail(i).name == "minecraft:coal" or turtle.getItemDetail(i).name == "minecraft:charcoal") and turtle.getItemCount(i) > 1 then
@@ -82,30 +78,9 @@ function checkFuel()
     end
 end
 
-function placeStairs()
-    -- i = 1
-    -- while i <= 16
-    -- do
-    --     turtle.select(i)
-    --     if turtle.getItemDetail(i) == nil and i < 16 then
-    --         i = i + 1
-    --     elseif turtle.getItemDetail(i).name == "minecraft:deepslate_tile_stairs" and turtle.getItemCount(i) > 1 then
-    --         print("Placing stairs!")
-    --         turtle.place()
-    --         break
-    --     elseif i == 16 then 
-    --         print("No more stairs! :(")
-    --         while 1 do end
-    --     elseif turtle.getItemDetail(i) ~= nil and i < 16 then
-    --         i = i + 1
-    --     end
-    -- end
-end
-
 function placeMove()
     for i = 0, 4
     do
-        placeStairs()
         if i == 4 then
             break
         end
@@ -127,8 +102,7 @@ function placeTorches()
     i = 1
     while i <= 16
     do
-        turtle.select(i)
-        print(i)        
+        turtle.select(i)      
         if turtle.getItemDetail(i) == nil and i < 16 then
             i = i + 1
         elseif turtle.getItemDetail(i).name == "minecraft:torch" and turtle.getItemCount(i) > 1 then
