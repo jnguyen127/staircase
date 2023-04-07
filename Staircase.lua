@@ -55,7 +55,7 @@ function ClearLeftToRight()
     end
 end
 
--- function checkFuel()
+function checkFuel()
 --     if turtle.getFuelLevel() < 100 then
 --         i = 1
 --         while i <= 16
@@ -75,7 +75,7 @@ end
 --             end
 --         end
 --     end
--- end
+end
 
 function placeStairs()
     i = 1
