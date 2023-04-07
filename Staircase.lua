@@ -56,6 +56,7 @@ function ClearLeftToRight()
 end
 
 function checkFuel()
+    print(turtle.getFuelLevel())
     if turtle.getFuelLevel() < 100 then
         i = 1
         while i <= 16
