@@ -164,7 +164,6 @@ do
     placeMove()
     turtle.turnRight()
     turtle.turnRight()
-    print("To place torches... j =", j)
     if j % 5 == 0 then
         placeTorches()
     end
