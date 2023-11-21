@@ -3,7 +3,6 @@ function detectF()
     while turtle.detect()
     do
         turtle.dig()
-        sleep(0.5)
     end
     turtle.forward()
 end 
