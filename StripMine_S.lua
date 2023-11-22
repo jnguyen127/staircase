@@ -48,6 +48,7 @@ function goForwardL(j)
 end
 
 function ClearStraight()
+    j = 0
     while 1 do
         checkFuel()
         goForwardR(j)
