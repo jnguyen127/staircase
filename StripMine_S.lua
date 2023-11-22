@@ -3,7 +3,6 @@ function detectF()
     while turtle.detect()
     do
         turtle.dig()
-        sleep(0.5)
     end
     turtle.forward()
 end 
@@ -24,6 +23,9 @@ function digF20(j)
     do  
         detectF()
         detectD()
+    end
+    if j % 5 == 0 then
+        placeTorches()
     end
 end
 
@@ -55,6 +57,25 @@ function ClearStraight()
     end
 end
 
+function placeTorches()
+    while i <= 16
+    do
+        turtle.select(i)      
+        if turtle.getItemDetail(i) == nil and i < 16 then
+            i = i + 1
+        elseif turtle.getItemDetail(i).name == "minecraft:torch" and turtle.getItemCount(i) > 1 then
+            turtle.placeDown()
+            break
+        elseif i == 16 then
+            print("No more torches! :(")
+            while 1 do 
+        end
+        elseif turtle.getItemDetail(i) ~= nil and i < 16 then
+            i = i + 1
+        end
+    end
+end
+
 function checkFuel()
     if turtle.getFuelLevel() < 100 then
         i = 1
@@ -79,7 +100,6 @@ end
 
 -- Main Code --
 detectD()
-j = 0
 while 1
 do
     ClearStraight()
