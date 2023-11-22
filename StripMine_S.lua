@@ -18,9 +18,11 @@ function detectD()
 end 
 
 function digF20(j)
-    checkFuel() 
-    detectF()
-    detectD()
+    checkFuel()
+    for i = 0, 20
+        detectF()
+        detectD()
+    end
     if j % 5 == 0 then
         placeTorches()
     end
