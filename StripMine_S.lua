@@ -22,7 +22,7 @@ function digF20(j)
     for i = 0, 20 do
         detectF()
         detectD()
-        if i % 5 == 0 && j % 5 == 0 then
+        if i % 5 == 0 and j % 5 == 0 then
             placeTorches()
         end
     end
