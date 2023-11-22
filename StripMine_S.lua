@@ -18,12 +18,9 @@ function detectD()
 end 
 
 function digF20(j)
-    checkFuel()
-    for i = 0, 1
-    do  
-        detectF()
-        detectD()
-    end
+    checkFuel() 
+    detectF()
+    detectD()
     if j % 5 == 0 then
         placeTorches()
     end
@@ -59,6 +56,7 @@ function ClearStraight()
 end
 
 function placeTorches()
+    i = 1
     while i <= 16
     do
         turtle.select(i)      
