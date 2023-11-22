@@ -59,7 +59,7 @@ end
 
 function placeTorches()
     i = 1
-    while i <= 16do
+    while i <= 16 do
         turtle.select(i)      
         if turtle.getItemDetail(i) == nil and i < 16 then
             i = i + 1
