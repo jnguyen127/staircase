@@ -22,15 +22,15 @@ function digF20(j)
     for i = 0, 20 do
         detectF()
         detectD()
-    end
-    if j % 5 == 0 then
-        placeTorches()
+        if i % 5 == 0 && j % 5 == 0 then
+            placeTorches()
+        end
     end
 end
 
-function goForwardR(j)
+function goForwardR(1)
     checkFuel()
-    digF20(j)
+    digF20(1)
     turtle.turnRight()
     detectF()
     detectD()
@@ -51,8 +51,7 @@ function ClearStraight()
     while 1 do
         checkFuel()
         goForwardR(j)
-        j = j + 1
-        goForwardL(j)
+        goForwardL(1)
         j = j + 1
     end
 end
