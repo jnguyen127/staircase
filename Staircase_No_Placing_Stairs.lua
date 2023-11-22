@@ -3,7 +3,6 @@ function detectF()
     while turtle.detect()
     do
         turtle.dig()
-        sleep(0.5)
     end
     turtle.forward()
 end 
@@ -56,7 +55,6 @@ function ClearLeftToRight()
 end
 
 function checkFuel()
-    print(turtle.getFuelLevel())
     if turtle.getFuelLevel() < 100 then
         i = 1
         while i <= 16
@@ -65,7 +63,6 @@ function checkFuel()
             if turtle.getItemDetail(i) == nil and i < 16 then
                 i = i + 1
             elseif (turtle.getItemDetail(i).name == "minecraft:coal" or turtle.getItemDetail(i).name == "minecraft:charcoal") and turtle.getItemCount(i) > 1 then
-                print("Refueling!")
                 turtle.refuel()
                 break
             elseif i == 16 then 
@@ -106,7 +103,6 @@ function placeTorches()
         if turtle.getItemDetail(i) == nil and i < 16 then
             i = i + 1
         elseif turtle.getItemDetail(i).name == "minecraft:torch" and turtle.getItemCount(i) > 1 then
-            print("Placing torches!")
             turtle.place()
             turtle.turnRight()
             turtle.turnRight()
@@ -147,7 +143,6 @@ do
     placeMove()
     turtle.turnRight()
     turtle.turnRight()
-    print("To place torches... j =", j)
     if j % 5 == 0 then
         placeTorches()
     end
