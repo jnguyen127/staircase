@@ -87,7 +87,8 @@ function placeStairs()
             break
         elseif i == 16 then 
             print("No more stairs! :(")
-            while 1 do end
+            while 1 do 
+        end
         elseif turtle.getItemDetail(i) ~= nil and i < 16 then
             i = i + 1
         end
@@ -146,7 +147,8 @@ function placeTorches()
             break
         elseif i == 16 then
             print("No more torches! :(")
-            while 1 do end
+            while 1 do 
+        end
         elseif turtle.getItemDetail(i) ~= nil and i < 16 then
             i = i + 1
         end
