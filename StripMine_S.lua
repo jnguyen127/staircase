@@ -28,9 +28,9 @@ function digF20(j)
     end
 end
 
-function goForwardR(1)
+function goForwardR(j)
     checkFuel()
-    digF20(1)
+    digF20(j)
     turtle.turnRight()
     detectF()
     detectD()
