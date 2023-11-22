@@ -19,7 +19,7 @@ end
 
 function digF20(j)
     checkFuel()
-    for i = 0, 20
+    for i = 0, 20 do
         detectF()
         detectD()
     end
@@ -59,8 +59,7 @@ end
 
 function placeTorches()
     i = 1
-    while i <= 16
-    do
+    while i <= 16do
         turtle.select(i)      
         if turtle.getItemDetail(i) == nil and i < 16 then
             i = i + 1
@@ -80,8 +79,7 @@ end
 function checkFuel()
     if turtle.getFuelLevel() < 100 then
         i = 1
-        while i <= 16
-        do
+        while i <= 16 do
             turtle.select(i)        
             if turtle.getItemDetail(i) == nil and i < 16 then
                 i = i + 1
@@ -91,7 +89,8 @@ function checkFuel()
                 break
             elseif i == 16 then 
                 print("No more fuel! :(")
-                while 1 do end
+                while 1 do 
+                end
             elseif turtle.getItemDetail(i) ~= nil and i < 16 then
                 i = i + 1
             end
